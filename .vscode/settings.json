@@ -5,6 +5,7 @@
         "sdl.h": "c",
         "limits.h": "c",
         "float.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "easyx.h": "c"
     }
 }

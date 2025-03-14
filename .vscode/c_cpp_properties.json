@@ -4,10 +4,10 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\C_PP\\include\\**"
-                //"D:\\MINGW\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\include\\**"
-               // "D:\\SDL2\\sdl\\include\\**",
-                //"D:/SDL2/sdl/include"
+                "C:\\C_PP\\include\\**",
+                "C:\\mingw\\include\\**",
+                "D:\\mingw64\\x86_64-w64-mingw32\\include\\**"
+
             ],
             "defines": [
                 "_DEBUG",
@@ -15,7 +15,8 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.22621.0",
-            "compilerPath": "C:\\mingw\\bin\\gcc.exe",
+            "compilerPath": /*"C:\\mingw\\bin\\gcc.exe",*/"D:\\mingw64\\bin\\g++.exe",
+            
             "cStandard": "c17",
             "cppStandard": "c++17",
            // "intelliSenseMode": "windows-msvc-x64"

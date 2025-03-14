@@ -7,7 +7,6 @@
 #include <my_sort.h>
 #include <time.h>
 #include <easyx.h>
-#include <graphics.h>
 
 void pause()
 {
@@ -33,7 +32,7 @@ void ClearScreen_WinAPI()
 int main()
 {
 
-    double g = 9.8, x = 0, m = 0, v = 0, f = 0;
+    double a = 0, g = 9.8, x = 0, m = 0, v = 0, f = 0;
     double end_time = 1.0;
     double sim_time = 0.0;
     double gap_time = 0.0;
@@ -42,6 +41,8 @@ int main()
     double per_sim_time = 0.0;
     double per_refresh_time = 0.0;
     double time_used = 0;
+
+    double info[256][256][256] = {0};
 
     int sim_times = 0;
     int mod = 0;
@@ -52,7 +53,7 @@ int main()
     scanf("%d", &mod);
     clear();
     printf("You have chosen Mod %d\n", mod);
-    Sleep(2000);
+    Sleep(1200);
 
     if (mod)
     {
@@ -98,11 +99,16 @@ int main()
             sleep_time = gap_time - fix_time;
     }
 
+    initgraph(800, 800, EX_SHOWCONSOLE);
+    setbkcolor(WHITE);
+    cleardevice();
+
     for (sim_time = 0, sim_times = 0; sim_time < end_time * 1000 + gap_time; sim_time += gap_time, sim_times++)
     {
         ClearScreen_WinAPI();
         v = g * sim_time / 1000;
         x = 0.5 * g * sim_time / 1000 * sim_time / 1000;
+
         printf("Simulation time : %lf\n", sim_time);
         printf("speed= %lf m/s\nx= %lf m\n", v, x);
         Sleep(sleep_time);

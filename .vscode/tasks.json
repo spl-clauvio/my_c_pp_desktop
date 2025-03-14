@@ -3,11 +3,14 @@
         {
             "type": "cppbuild",
             "label": "mission2",
-            "command": "C:\\mingw\\bin\\g++.exe",
+            "command": "D:\\TDM\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "-L",
+                "D:\\TDM\\lib",
+                "-leasyx",
                 "C:\\C_PP\\const\\const.c",
                 "-I",
                 "C:\\C_PP\\include\\",
