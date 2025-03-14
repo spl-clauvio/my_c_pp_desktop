@@ -6,6 +6,8 @@
 #include <string.h>
 #include <my_sort.h>
 #include <time.h>
+#include <easyx.h>
+#include <graphics.h>
 
 void pause()
 {
