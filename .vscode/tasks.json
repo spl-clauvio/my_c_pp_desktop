@@ -1,0 +1,34 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "mission2",
+            "command": "C:\\mingw\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "C:\\C_PP\\const\\const.c",
+                "-I",
+                "C:\\C_PP\\include\\",
+                "C:\\C_PP\\execute\\**",
+                "-o",
+                "C:\\C_PP\\code_exe\\${fileBasenameNoExtension}.exe",
+                "-fexec-charset=GBK",
+                "-lmingw32",
+                
+
+
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "调试器生成的任务。"
+        },
+    ],
+    "version": "2.0.0"
+}

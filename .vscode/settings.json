@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "add.h": "c",
+        "windows.h": "c",
+        "sdl.h": "c",
+        "limits.h": "c",
+        "float.h": "c",
+        "stdio.h": "c"
+    }
+}
