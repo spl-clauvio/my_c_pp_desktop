@@ -19,6 +19,8 @@
                 "C:\\C_PP\\code_exe\\${fileBasenameNoExtension}.exe",
                 "-fexec-charset=GBK",
                 "-lmingw32",
+                "-O2",
+                //"-Wl,-subsystem,windows",
                 
 
 

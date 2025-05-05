@@ -1,36 +1,21 @@
 #include <stdio.h>
-#include <windows.h>
+#include <stdlib.h>
+#include <Windows.h>
 
 void pause()
 {
     system("pause");
 }
-int main()
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+                   PSTR szCmdLine, int iCmdShow)
 {
+    // 在这里添加代码逻辑，比如调用 Windows API 函数创建窗口等
 
-    FILE *file; // 声明文件指针
+    ShowWindow(GetConsoleWindow(), SW_HIDE);
+    // 这里简单地使用 MessageBox 显示信息
+    MessageBox(NULL, TEXT("Hello, Windows!"), TEXT("Message"), MB_OK);
+    // pause();
 
-    file = fopen("C:\\C_PP\\txt\\example.txt", "w");
-
-    SYSTEMTIME sysTime;
-    GetLocalTime(&sysTime); // 获取本地时间（含毫秒）
-
-    // 格式化输出时间
-    printf("time:%04d-%02d-%02d %02d:%02d:%02d.%03d\n",
-           sysTime.wYear, sysTime.wMonth, sysTime.wDay,
-           sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
-
-    // 获取 UTC 时间（不含时区偏移）
-    GetSystemTime(&sysTime);
-    printf("time:%04d-%02d-%02d %02d:%02d:%02d.%03d\n",
-           sysTime.wYear, sysTime.wMonth, sysTime.wDay,
-           sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
-
-    fprintf(file, "%04d-%02d-%02d %02d:%02d:%02d.%03d\n", sysTime.wYear, sysTime.wMonth, sysTime.wDay,
-            sysTime.wHour, sysTime.wMinute, sysTime.wSecond, sysTime.wMilliseconds);
-
-    fclose(file);
-    printf("文件已成功写入！\n");
-    pause();
     return 0;
 }

@@ -9,6 +9,7 @@ void pause()
 
 int main()
 {
+    ShowWindow(GetConsoleWindow(), SW_HIDE);
     int i = 1;
     int flag = 1;
     FILE *file;
